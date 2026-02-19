@@ -1,5 +1,7 @@
 # prd 产品需求文档
 
+> 状态说明（2026-02-19）：本文件为历史需求草稿沉淀。当前执行基线请以 `docs/decision.md`、`docs/requirements.md`、`docs/architecture.md`、`docs/tech_stack.md` 为准。
+
 ## 目录
 
 - [ 绘图可视化](#-绘图可视化)
