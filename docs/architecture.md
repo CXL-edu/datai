@@ -1,4 +1,4 @@
-# Datai Architecture
+# 数源智能 Architecture
 
 更新时间：2026-02-19
 说明：本文件是 `docs/prd.md` 的架构落地文档。

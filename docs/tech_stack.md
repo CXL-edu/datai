@@ -1,4 +1,4 @@
-# Datai Tech Stack
+# 数源智能 Tech Stack
 
 更新时间：2026-02-19
 说明：本文件是 `docs/prd.md` 的技术选型落地文档。

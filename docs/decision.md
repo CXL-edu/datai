@@ -1,10 +1,10 @@
-# Datai 决策基线（Single Source of Truth）
+# 数源智能 决策基线（Single Source of Truth）
 
 更新时间：2026-02-19
 状态：已确认
 
 ## 1. 产品定位
-Datai 是一个面向表格数据分析的 AI Agent Web 应用。  
+数源智能（Datai）是一个面向表格数据分析的 AI Agent Web 应用。  
 优先验证“分析推理准确性 + 可视化输出质量 + 可解释过程展示”。
 
 ## 2. 已确认决策

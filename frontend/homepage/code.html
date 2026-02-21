@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Datai - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f756d",
+                        "background-light": "#f4f6fb",
+                        "background-dark": "#112120",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(15, 117, 109, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-primary">Datai</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300" href="#">Workspace</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300" href="#">Datasets</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300" href="#">Settings</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-sm font-semibold text-primary hover:underline">Log in</button>
+<button class="rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
+                    Get Started
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative overflow-hidden px-6 pt-8 pb-24 lg:px-10 lg:pt-12">
+<div class="mx-auto max-w-7xl">
+<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+<div class="flex flex-col gap-8">
+<h1 class="text-5xl font-bold leading-[1.1] tracking-tight text-slate-900 lg:text-7xl dark:text-white">Turn Spreadsheets into <span class="text-primary">Decisions instantly</span></h1>
+<p class="max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+                            Unlock deep insights from your data using our advanced AI agent. Ask questions in plain English and get instant results, charts, and automated reports.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="rounded-xl bg-primary px-8 py-4 text-lg font-bold text-white shadow-xl shadow-primary/30 hover:bg-primary/90 transition-all active:scale-95">Start Analysis</button>
+<button class="rounded-xl border-2 border-primary/20 bg-white/50 px-8 py-4 text-lg font-bold text-primary backdrop-blur hover:bg-primary/5 transition-all">
+                                Watch Demo
+                            </button>
+</div>
+<div class="flex items-center gap-4 text-sm text-slate-500">
+<div class="flex -space-x-2">
+<div class="h-8 w-8 rounded-full border-2 border-background-light bg-slate-200" data-alt="Senior Data Analyst Avatar"></div>
+<div class="h-8 w-8 rounded-full border-2 border-background-light bg-slate-300" data-alt="Avatar of user 2"></div>
+<div class="h-8 w-8 rounded-full border-2 border-background-light bg-slate-400" data-alt="Avatar of user 3"></div>
+</div>
+<p>Trusted by 5,000+ data analysts</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 rounded-3xl bg-primary/5 blur-3xl"></div>
+<div class="relative rounded-2xl border border-primary/10 bg-white p-4 shadow-2xl dark:bg-slate-900">
+<div class="mb-4 flex items-center justify-between border-b border-slate-100 pb-4 dark:border-slate-800">
+<div class="flex gap-2">
+<div class="h-3 w-3 rounded-full bg-red-400"></div>
+<div class="h-3 w-3 rounded-full bg-yellow-400"></div>
+<div class="h-3 w-3 rounded-full bg-green-400"></div>
+</div>
+<div class="text-xs font-medium text-slate-400">financial_report_2024.xlsx</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-3 rounded-lg bg-slate-50 p-3 dark:bg-slate-800/50">
+<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] text-white">AI</div>
+<p class="text-sm text-slate-600 dark:text-slate-300">Ready to analyze. What would you like to know about the Q3 growth trends?</p>
+</div>
+<div class="flex items-start justify-end gap-3">
+<div class="rounded-lg bg-primary/10 p-3 text-sm text-primary">"Show me a comparison of revenue vs target by region."</div>
+</div>
+<div class="rounded-lg border border-slate-100 bg-white p-2 dark:border-slate-800 dark:bg-slate-900">
+<div class="h-48 w-full flex items-end justify-between gap-2 p-4 bg-slate-50 rounded-md">
+<div class="w-1/6 bg-primary/20 h-[40%] rounded-t-sm"></div>
+<div class="w-1/6 bg-primary/40 h-[65%] rounded-t-sm"></div>
+<div class="w-1/6 bg-primary/60 h-[50%] rounded-t-sm"></div>
+<div class="w-1/6 bg-primary/80 h-[85%] rounded-t-sm"></div>
+<div class="w-1/6 bg-primary h-[70%] rounded-t-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-white/50 py-24 dark:bg-slate-950/20">
+<div class="mx-auto max-w-7xl px-6 lg:px-10">
+<div class="mb-16 text-center">
+<h2 class="mb-4 text-3xl font-bold tracking-tight text-slate-900 lg:text-4xl dark:text-white">How it Works</h2>
+<p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-slate-400">
+                        Three simple steps to transform your raw data into actionable insights with the power of AI.
+                    </p>
+</div>
+<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+<div class="group relative rounded-2xl border border-primary/10 bg-white p-8 transition-shadow hover:shadow-md dark:bg-slate-900">
+<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">upload_file</span>
+</div>
+<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">1. Upload</h3>
+<p class="text-slate-600 dark:text-slate-400">
+                            Securely import your .csv or .xlsx files into our encrypted workspace. Large datasets are handled with ease.
+                        </p>
+</div>
+<div class="group relative rounded-2xl border border-primary/10 bg-white p-8 transition-shadow hover:shadow-md dark:bg-slate-900">
+<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">forum</span>
+</div>
+<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">2. Chat</h3>
+<p class="text-slate-600 dark:text-slate-400">
+                            Ask questions about your data in plain English. Our AI agent understands context and complex analytical requirements.
+                        </p>
+</div>
+<div class="group relative rounded-2xl border border-primary/10 bg-white p-8 transition-shadow hover:shadow-md dark:bg-slate-900">
+<div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+<span class="material-symbols-outlined text-3xl">insights</span>
+</div>
+<h3 class="mb-3 text-xl font-bold text-slate-900 dark:text-white">3. Generate Report</h3>
+<p class="text-slate-600 dark:text-slate-400">Get visual insights, charts, and export comprehensive PDF reports instantly.</p>
+</div>
+</div>
+</div>
+</section><section class="pt-24 pb-10 px-6 lg:px-10">
+<div class="mx-auto max-w-7xl">
+<div class="flex items-center justify-between mb-12">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Quick Start Scenarios</h2>
+<a class="flex items-center gap-2 text-primary font-semibold hover:underline" href="#">
+                        See all templates
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group flex flex-col overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-md dark:bg-slate-900 dark:border-slate-800 cursor-pointer">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<img alt="Abstract chart showing sales growth" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaAAFuarH9kUUZWTQKYcnDTBzzTHUubKdrtyct9dXresRlgly5shrWQLuA6R8eklL1-Fe2hoKXBa9iQfY7LX0jE8pTSSOCtQJsYlkiGkQaJzoBxceewywu6emEJckNEBV_Zrpwt7vaAIyeGaH7IGkeTVKNLl_S5Pde5yfW_-sK5lkjk2P_2wHiWJjzq1o4oo7xOo1Ci1YfChFNc5Tokt48OjKWF_Z_5T0V_93r7jdxmRgwrKUKhA_ASPTjGZIw-Wa73QjRK1LwGA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<div class="absolute top-4 left-4 rounded bg-primary px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-white">Popular</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-slate-900 mb-2 dark:text-white">Sales Trend Analysis</h3>
+<p class="text-sm text-slate-500 mb-6 flex-1">Analyze monthly revenue growth, identify seasonal patterns, and forecast next quarter.</p>
+<button class="flex items-center gap-2 text-sm font-bold text-primary group">
+                                Use Template
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="group flex flex-col overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-md dark:bg-slate-900 dark:border-slate-800 cursor-pointer">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<img alt="Spreadsheet and calculator" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0eAL9g85QkZXMlkviz4Lkf03q1KOnE_P_LaNfL6qADv0MTptsNHzBP6ELObdSdHVxReHk1uTtnlGUpIShcR_mjMTbNfjIlrSuvOtLbTxuv5Y11aZv90QYeJ6ad5SmiUkaFgdpzxT3f0h6VdTaHQd3IgrN2MuNREqW0g1XoNlpuZ3xE29QTecAnpf6LPPbyYrJ970VjW8mHbQoBIIiXG_m3D7F2IqBnqKeF5fKDv1q9JP2nXx7bBWv0oAxJAvn6J5XRD9JEnTJ-g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-slate-900 mb-2 dark:text-white">Budget Variance</h3>
+<p class="text-sm text-slate-500 mb-6 flex-1">Compare projected budget vs actual spending to highlight overspending categories.</p>
+<button class="flex items-center gap-2 text-sm font-bold text-primary group">
+                                Use Template
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="group flex flex-col overflow-hidden rounded-xl border border-slate-100 bg-white shadow-sm transition-all hover:shadow-md dark:bg-slate-900 dark:border-slate-800 cursor-pointer">
+<div class="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+<img alt="Inventory shelves warehouse" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP5I6SRWeXmXLRHKcNXlOrSvoU88wN1D-lxUZJu6Plzr1VhkLE7tN84Qsj9QFVsph541Lz909yWPxxIZ0PSfEJ_zvOH6Emc58Epmbutgjro-alzr4q3nBBnWvjdrhMdSZQEnkB0yklZndPJVT6FGQGmnIUpQ9ejNtSfSRToT2ziZ9oZDsOy30N-461fKGQ8XFq5q7v1he2NMlDpo2VXmacVjXue8PJNZIU6__FRFILNFlx7mKDr6UXxrlpS_OZgPgBQ7pwlogvfg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<h3 class="text-xl font-bold text-slate-900 mb-2 dark:text-white">Inventory Optimization</h3>
+<p class="text-sm text-slate-500 mb-6 flex-1">Optimize stock levels, predict reorder points, and minimize carrying costs.</p>
+<button class="flex items-center gap-2 text-sm font-bold text-primary group">
+                                Use Template
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-6 pt-6 pb-12 lg:px-10 bg-background-light dark:bg-background-dark">
+<div class="mx-auto max-w-5xl rounded-3xl bg-primary px-8 py-12 text-center shadow-xl shadow-primary/30 lg:py-16">
+<h2 class="mb-6 text-3xl font-bold text-white lg:text-5xl">Ready to supercharge your data analysis?</h2>
+<p class="mx-auto mb-10 max-w-2xl text-lg text-white/90 rounded-xl bg-white/10 p-4 backdrop-blur-sm">
+                        Join thousands of data scientists and analysts who are using Datai to cut their analysis time by 80%.
+                    </p>
+<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+<button class="w-full rounded-xl bg-white px-8 py-4 text-lg font-bold text-primary transition-all hover:bg-slate-50 active:scale-95 sm:w-auto">
+                            Start Analyzing Now
+                        </button>
+<button class="w-full rounded-xl border border-white/30 bg-white/10 px-8 py-4 text-lg font-bold text-white transition-all hover:bg-white/20 sm:w-auto">
+                            Book a Demo
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-primary/10 bg-white py-12 dark:bg-slate-950">
+<div class="mx-auto max-w-7xl px-6 lg:px-10">
+<div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-lg">analytics</span>
+</div>
+<span class="text-lg font-bold text-slate-900 dark:text-white">Datai</span>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Documentation</a>
+</div>
+<div class="flex gap-4">
+<a class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-400 hover:border-primary hover:text-primary transition-all" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-400 hover:border-primary hover:text-primary transition-all" href="#">
+<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-100 text-center dark:border-slate-900">
+<p class="text-sm text-slate-400">© 2024 Datai AI. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

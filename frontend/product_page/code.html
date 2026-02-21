@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Datai - Workspace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f756d",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0">
+<div class="p-6 flex flex-col gap-1"><div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-2">
+<h1 class="text-primary text-2xl font-bold tracking-tight">Datai</h1>
+</div>
+<button class="p-1 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">menu_open</span>
+</button>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-widest">Analysis Pro</p></div>
+<nav class="flex-1 px-4 py-4 space-y-2"><button class="w-full flex items-center justify-center gap-2 bg-primary text-white py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90 transition-all mb-4"><span class="material-symbols-outlined text-lg">add</span> New Analysis</button>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-semibold cursor-pointer group"><span class="material-symbols-outlined text-[22px]">history</span> <span class="text-sm">History</span></div>
+<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-[22px]">database</span>
+<span class="text-sm">Datasets</span>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 mt-auto relative group">
+<div class="flex items-center gap-3 cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800 p-2 rounded-lg transition-colors">
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden border border-slate-200 shrink-0" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnLNlmJinBvE8a6Axll3TXN4BBPsmY_hCmPTUyxpgt2R7vzwu8Lgf8Eoshzx4_evV_giKRV4ClVwGkG3kzud4BQHQZUE-aa54bVqtFhC6Kxwk5POH67ZHC8sYXbwMteHQEt3Fm3dxhHc2p0R1_vrUpJL01VEowO4YsQl3UuWWWIeXLLPooDeIYqgPE0WjXKNylO4quLsCdBa47rzS-DaxBiYNF8hB-wUtDM1x94TFsmlOx2yqmk7IqoKB_RN8BBaCOnvQRzFq7Lg'); background-size: cover;"></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate">Alex Analysis</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight">Pro Member</p>
+</div>
+<span class="material-symbols-outlined text-slate-400">expand_less</span>
+</div>
+<!-- Dropdown Menu -->
+<div class="absolute bottom-full left-4 right-4 mb-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden hidden group-hover:block z-50">
+<div class="p-2 flex flex-col">
+<button class="flex items-center gap-3 px-3 py-2 text-sm text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg">
+<span class="material-symbols-outlined text-lg">settings</span> Settings
+      </button>
+<button class="flex items-center gap-3 px-3 py-2 text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg">
+<span class="material-symbols-outlined text-lg">logout</span> Logout
+      </button>
+</div>
+</div>
+</div></aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col relative overflow-hidden">
+<!-- Header -->
+<!-- Chat Interface -->
+<div class="flex-1 overflow-y-auto custom-scrollbar p-8 space-y-8 pb-32">
+<!-- Date Separator -->
+<div class="flex justify-center">
+<span class="text-[11px] font-bold uppercase tracking-widest text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full">Today</span>
+</div>
+<!-- User Message -->
+<div class="flex flex-col items-end gap-2 max-w-2xl ml-auto">
+<div class="bg-primary text-white p-4 rounded-xl rounded-tr-none shadow-sm">
+<p class="text-sm leading-relaxed">Can you analyze the sales trends for the last quarter and visualize the growth compared to Q3? Please also clean any null values in the 'region' column.</p>
+</div>
+<span class="text-[10px] text-slate-400 font-medium uppercase">10:42 AM</span>
+</div>
+<!-- Assistant Message -->
+<div class="flex gap-4 max-w-4xl group">
+<div class="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-lg">auto_awesome</span>
+</div>
+<div class="flex-1 space-y-4">
+<div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-5 rounded-xl rounded-tl-none shadow-sm space-y-4">
+<p class="text-sm leading-relaxed text-slate-700 dark:text-slate-300">
+                                Certainly! I've initiated the analysis. I'm currently processing the dataset, removing missing entries in the region field, and calculating the quarter-over-quarter growth metrics.
+                            </p>
+<!-- Task Timeline Card -->
+<div class="space-y-3">
+<!-- Step 1: Read Dataset (Success) -->
+<div class="border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 transition-all">
+<div class="p-3 flex items-center justify-between cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Read Dataset</span>
+<span class="text-[10px] text-slate-500 uppercase tracking-tight">Status: Completed</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-mono text-slate-400">0.8s</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Step 2: Data Cleaning (Success & Expanded) -->
+<div class="border border-primary/30 dark:border-primary/20 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 shadow-sm transition-all">
+<div class="p-3 flex items-center justify-between cursor-pointer bg-primary/5">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Data Cleaning</span>
+<span class="text-[10px] text-primary/70 uppercase tracking-tight font-medium">Preprocessing finished</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-mono text-slate-400">1.4s</span>
+<span class="material-symbols-outlined text-primary text-sm">expand_less</span>
+</div>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30"><div class="font-display text-[13px] space-y-3">
+<div class="space-y-1">
+<p class="font-bold text-slate-500 text-[10px] uppercase tracking-wider">Preprocessing Report</p>
+<ul class="list-none space-y-1 text-slate-700 dark:text-slate-300">
+<li>• Found <span class="font-bold">42</span> null entries in <code class="font-mono bg-slate-100 dark:bg-slate-800 px-1 rounded">region</code>; imputed with "Unknown".</li>
+<li>• Identified <span class="font-bold">12</span> outliers in sales volume; excluded from trend calc.</li>
+</ul>
+</div>
+<div class="space-y-1">
+<p class="font-bold text-slate-500 text-[10px] uppercase tracking-wider">Execution Log</p>
+<pre class="font-mono text-[11px] bg-slate-900 text-emerald-400 p-3 rounded-lg leading-relaxed">&gt; df['region'].fillna('Unknown', inplace=True)
+&gt; df = df[df['sales'] &lt; df['sales'].quantile(0.99)]
+&gt; processed 12,450 rows in 1.4s</pre>
+</div>
+</div></div>
+</div>
+<!-- Step 3: Trend Analysis (Running) -->
+<div class="border border-amber-200 dark:border-amber-900/50 rounded-xl overflow-hidden bg-white dark:bg-slate-900/40 transition-all"><div class="p-3 flex items-center justify-between cursor-pointer hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
+<span class="material-symbols-outlined text-sm animate-spin">sync</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs font-bold">Trend Analysis</span>
+<span class="text-[10px] text-amber-600 uppercase tracking-tight">Calculating correlation...</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-mono text-slate-400">Active</span>
+<span class="material-symbols-outlined text-slate-400 text-sm">expand_less</span>
+</div>
+</div>
+<div class="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30">
+<div class="font-display text-[13px] space-y-2">
+<p class="font-bold text-slate-500 text-[10px] uppercase tracking-wider">In Progress</p>
+<pre class="font-mono text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed italic">[WAITING] Running Pearson correlation matrix...
+[WAITING] Generating seasonal decomposition...
+[SYSTEM] Aggregating Q3 vs Q4 delta...</pre>
+</div>
+</div></div>
+</div>
+<!-- Chart Card -->
+<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-sm">
+<div class="p-4 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between">
+<div>
+<h3 class="text-sm font-bold">Q3 vs Q4 Sales Distribution</h3>
+<p class="text-[10px] text-slate-400">Interactive Scatter Plot • Real-time Data</p>
+</div>
+<div class="flex gap-1">
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+<button class="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-sm">fullscreen</span>
+</button>
+</div>
+</div>
+<div class="h-64 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-center relative overflow-hidden group/chart">
+<!-- Simplified Plotly-style visualization background -->
+<div class="absolute inset-0 opacity-20 dark:opacity-10 bg-[radial-gradient(#0f756d_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<div class="relative w-full h-full p-8 flex items-end gap-2">
+<div class="flex-1 bg-primary/20 h-[40%] rounded-t-sm border-t-2 border-primary/50"></div>
+<div class="flex-1 bg-primary/30 h-[60%] rounded-t-sm border-t-2 border-primary/50"></div>
+<div class="flex-1 bg-primary/40 h-[55%] rounded-t-sm border-t-2 border-primary/50"></div>
+<div class="flex-1 bg-primary/60 h-[85%] rounded-t-sm border-t-2 border-primary"></div>
+<div class="flex-1 bg-primary/30 h-[70%] rounded-t-sm border-t-2 border-primary/50"></div>
+<div class="flex-1 bg-primary/40 h-[45%] rounded-t-sm border-t-2 border-primary/50"></div>
+<div class="flex-1 bg-primary/50 h-[95%] rounded-t-sm border-t-2 border-primary"></div>
+</div>
+<div class="absolute inset-0 flex items-center justify-center bg-white/40 dark:bg-slate-900/40 backdrop-blur-[1px] opacity-0 group-hover/chart:opacity-100 transition-opacity">
+<button class="bg-primary text-white px-4 py-2 rounded-lg font-bold text-xs shadow-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">analytics</span>
+                                            View Detailed Report
+                                        </button>
+</div>
+</div>
+<div class="p-3 bg-slate-50 dark:bg-slate-800/80 flex items-center justify-between">
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-[9px] uppercase font-bold text-slate-400">Total Volume</span>
+<span class="text-xs font-bold">$1.2M</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] uppercase font-bold text-slate-400">Growth</span>
+<span class="text-xs font-bold text-emerald-500">+14.2%</span>
+</div>
+</div>
+<button class="text-primary text-xs font-bold hover:underline transition-all">Export JSON</button>
+</div>
+</div>
+</div>
+<span class="text-[10px] text-slate-400 font-medium uppercase px-1">10:43 AM</span>
+</div>
+</div>
+</div>
+<!-- Message Composer -->
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent">
+<div class="max-w-4xl mx-auto bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl flex items-center p-1.5 gap-2">
+<div class="flex items-center gap-0.5 px-1">
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/5 rounded-lg transition-all" title="Upload Dataset">
+<span class="material-symbols-outlined text-xl">upload_file</span>
+</button>
+<button class="p-2 text-slate-400 hover:text-primary hover:bg-primary/5 rounded-lg transition-all" title="Insert Function">
+<span class="material-symbols-outlined text-xl">functions</span>
+</button>
+</div>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700"></div>
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-sm py-2 px-3" placeholder="Ask a question about your data..." type="text"/>
+<span class="text-[10px] text-slate-400 font-medium px-2 italic hidden sm:block">Shift + Enter</span>
+<button class="bg-primary text-white p-2 px-4 rounded-lg flex items-center gap-2 hover:bg-primary/90 transition-all font-bold text-sm shadow-md shadow-primary/20">
+                            Send
+                            <span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Right Toolbelt / Context Sidebar (Optional) -->
+<aside class="w-80 border-l border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col shrink-0 overflow-hidden">
+<!-- Panel Header -->
+<div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="p-1 text-slate-400 hover:text-primary transition-colors" title="Back">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+</button>
+<h2 class="text-sm font-bold">Artifacts</h2>
+</div>
+<button class="p-1 text-slate-400 hover:text-primary transition-colors" title="Collapse">
+<span class="material-symbols-outlined">first_page</span>
+</button>
+</div>
+<!-- View Toggle -->
+<div class="p-4">
+<div class="flex bg-slate-100 dark:bg-slate-800 rounded-lg p-1">
+<button class="flex-1 py-1.5 text-[11px] font-bold rounded-md bg-white dark:bg-slate-700 shadow-sm">Raw Data</button>
+<button class="flex-1 py-1.5 text-[11px] font-bold text-slate-500">EDA Statistics</button>
+</div>
+</div>
+<!-- Explorer Content (Scrollable) -->
+<div class="flex-1 overflow-y-auto p-4 custom-scrollbar">
+<!-- Folders Section -->
+<div class="mb-6">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Folders</p>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-amber-500 mb-2">folder</span>
+<p class="text-xs font-bold truncate">Q3 Reports</p>
+<p class="text-[9px] text-slate-400">12 items</p>
+</div>
+<div class="p-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-amber-500 mb-2">folder</span>
+<p class="text-xs font-bold truncate">Archive 2022</p>
+<p class="text-[9px] text-slate-400">45 items</p>
+</div>
+</div>
+</div>
+<!-- Files Section -->
+<div>
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">Recent Files</p>
+<div class="space-y-2">
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary transition-colors ring-1 ring-primary/20">
+<span class="material-symbols-outlined text-emerald-500">description</span>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold truncate">sales_2025.csv</p>
+<p class="text-[9px] text-slate-400">4.2 MB • Oct 24</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-sm">check_circle</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-blue-500">table_chart</span>
+<div class="flex-1 min-w-0">
+<p class="text-xs font-bold truncate">customer_leads.xls</p>
+<p class="text-[9px] text-slate-400">2.4 MB • 2h ago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- EDA Preview Mock (Hidden by default or shown on file click) -->
+<div class="mt-8 space-y-4 border-t border-slate-100 dark:border-slate-800 pt-6">
+<p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Quick Stats</p>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
+<p class="text-[9px] text-slate-400">Total Rows</p>
+<p class="text-xs font-bold">154.2K</p>
+</div>
+<div class="p-2 bg-slate-50 dark:bg-slate-800 rounded-lg">
+<p class="text-[9px] text-slate-400">Missing Values</p>
+<p class="text-xs font-bold text-red-500">12 (0.01%)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Toolbelt Rails (when collapsed) -->
+<div class="p-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-center gap-4"><button class="p-1.5 text-slate-400 hover:text-primary" title="Data Table"><span class="material-symbols-outlined text-xl">table_chart</span></button><button class="p-1.5 text-slate-400 hover:text-primary" title="Visualizations"><span class="material-symbols-outlined text-xl">bar_chart</span></button></div>
+</aside>
+</div>
+</body></html>

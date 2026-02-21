@@ -1,10 +1,10 @@
-# Datai Requirements
+# 数源智能 Requirements
 
 更新时间：2026-02-19
 说明：本文件是 `docs/prd.md` 的需求细化文档，不替代 PRD 主文档。
 
 ## 1. 产品目标
-Datai 是一个面向电子表格场景的数据分析 AI Agent Web 应用。  
+数源智能（Datai）是一个面向电子表格场景的数据分析 AI Agent Web 应用。  
 核心目标是：让用户上传表格后，通过流式对话快速得到可解释、可复核、可视化的分析结果。
 
 ## 2. MVP 范围（阶段 1）

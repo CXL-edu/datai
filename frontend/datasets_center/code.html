@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Datai - Datasets Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f756d",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#112120",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sidebar-item-active {
+            background-color: rgba(15, 117, 109, 0.1);
+            color: #0f756d;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col">
+<div class="p-6 flex items-center gap-3">
+<div class="bg-primary size-10 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">database</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight text-primary">Datai</h1>
+<p class="text-xs text-slate-500 font-medium">Data Management</p>
+</div>
+</div>
+<div class="px-4 mb-6">
+<button class="w-full bg-primary hover:bg-primary/90 text-white flex items-center justify-center gap-2 py-3 rounded-xl font-bold transition-all shadow-sm">
+<span class="material-symbols-outlined">add</span>
+                    New Dataset
+                </button>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg sidebar-item-active group transition-colors" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+<span class="font-medium">All Datasets</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">schedule</span>
+<span class="font-medium">Recent</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">star</span>
+<span class="font-medium">Starred</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">delete</span>
+<span class="font-medium">Trash</span>
+</a>
+<div class="pt-6 pb-2">
+<p class="px-3 text-[10px] font-bold uppercase tracking-wider text-slate-400">Storage</p>
+</div>
+<div class="px-3">
+<div class="w-full bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full overflow-hidden mb-2">
+<div class="bg-primary h-full w-3/4"></div>
+</div>
+<p class="text-[11px] text-slate-500">7.5 GB of 10 GB used</p>
+</div>
+</nav>
+<div class="p-4 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer">
+<div class="size-9 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="User avatar profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-ofpQ0cgL-XaYXY-xazmEFKh0pjINTHoL0V7HnIkdZiurU-ITN8KF0KTVgYgrV6U58LScXy-v6ed4yfGkZbyWjW_wNVyzOBQ84DbusgTiqs066enl5iQwNRJsFY_l908nbEL53AvHQg1YWwi9KtkUEpFPBLj3JCKiRxk8p2FqKD98T5pXa5t5yibjQUc_QyHftTJX_AHNzh2koswdC658Y7U3OTpmuOcFjq9f5fzx3WrgEx3zFakPEHZejZAzrYmzjJncfEiPBQ')"></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-semibold truncate">Alex Rivera</p>
+<p class="text-[11px] text-slate-500 truncate">Pro Account</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 text-sm">settings</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col min-w-0 overflow-hidden">
+<!-- Top Header -->
+<header class="h-16 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md flex items-center justify-between px-8 shrink-0">
+<div class="flex-1 max-w-xl">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-100 dark:bg-slate-800 border-none rounded-xl focus:ring-2 focus:ring-primary/20 text-sm placeholder:text-slate-400 transition-all" placeholder="Search across all files..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4 ml-4">
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Browser Navigation & Actions -->
+<div class="px-8 py-4 space-y-4 shrink-0">
+<div class="flex items-center justify-between">
+<nav class="flex items-center text-sm font-medium">
+<a class="text-slate-500 hover:text-primary flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-lg">home</span>
+                            Home
+                        </a>
+<span class="material-symbols-outlined text-slate-300 mx-2 text-base">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-100">Sales Data</span>
+</nav>
+<div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 p-1 rounded-xl">
+<button class="p-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-primary">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+</button>
+<button class="p-1.5 rounded-lg text-slate-500 hover:bg-white/50 dark:hover:bg-slate-700/50">
+<span class="material-symbols-outlined text-xl">list</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Sales Data</h2>
+<div class="flex-1"></div>
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">sort</span>
+                        Last Modified
+                    </button>
+<button class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">filter_alt</span>
+                        Filter
+                    </button>
+</div>
+</div>
+<!-- Scrollable Grid View -->
+<div class="flex-1 overflow-y-auto px-8 pb-8"><!-- Folders Section -->
+<section class="mb-8">
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 px-1 flex items-center">Folders</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6"><div class="group border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-primary/50 hover:bg-primary/5 transition-all cursor-pointer min-h-[160px]">
+<div class="size-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">create_new_folder</span>
+</div>
+<p class="text-sm font-semibold text-slate-500 group-hover:text-primary">New Folder</p>
+</div>
+<!-- Folder Item: Q3 Reports -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer relative">
+<button class="absolute top-2 right-2 p-1 text-slate-400 opacity-0 group-hover:opacity-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-all">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+<div class="flex flex-col items-center text-center gap-3">
+<div class="size-16 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">folder</span>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-slate-100 truncate w-full flex items-center">Q3 Reports</h3>
+<p class="text-[11px] text-slate-500 uppercase font-bold tracking-tight">12 Items</p>
+</div>
+</div>
+</div>
+<!-- Folder Item: Archive 2022 -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer relative">
+<button class="absolute top-2 right-2 p-1 text-slate-400 opacity-0 group-hover:opacity-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-all">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+<div class="flex flex-col items-center text-center gap-3">
+<div class="size-16 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">folder</span>
+</div>
+<div>
+<h3 class="font-semibold text-slate-900 dark:text-slate-100 truncate w-full flex items-center">Archive 2022</h3>
+<p class="text-[11px] text-slate-500 uppercase font-bold tracking-tight">45 Items</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Files Section -->
+<section>
+<h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 px-1">Files</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6"><div class="group border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col items-center justify-center gap-3 hover:border-primary/50 hover:bg-primary/5 transition-all cursor-pointer min-h-[160px]">
+<div class="size-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">upload_file</span>
+</div>
+<p class="text-sm font-semibold text-slate-500 group-hover:text-primary">Upload Files</p>
+</div>
+<!-- Spreadsheet File (CSV): customer_leads -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer relative">
+<button class="absolute top-2 right-2 p-1 text-slate-400 opacity-0 group-hover:opacity-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-all">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+<div class="flex flex-col items-center text-center gap-3">
+<div class="size-16 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-6xl">description</span>
+</div>
+<div class="w-full">
+<h3 class="font-semibold text-slate-900 dark:text-slate-100 truncate px-2">customer_leads.csv</h3>
+<div class="flex items-center justify-center gap-2 mt-1">
+<span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">CSV</span>
+<span class="text-[11px] text-slate-500">2.4 MB</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-2 italic">Modified 2h ago</p>
+</div>
+</div>
+</div>
+<!-- Spreadsheet File (XLSX): regional_sales -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer relative">
+<button class="absolute top-2 right-2 p-1 text-slate-400 opacity-0 group-hover:opacity-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-all">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+<div class="flex flex-col items-center text-center gap-3">
+<div class="size-16 flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-6xl">table_chart</span>
+</div>
+<div class="w-full">
+<h3 class="font-semibold text-slate-900 dark:text-slate-100 truncate px-2">regional_sales.xlsx</h3>
+<div class="flex items-center justify-center gap-2 mt-1">
+<span class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">XLSX</span>
+<span class="text-[11px] text-slate-500">850 KB</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-2 italic">Modified Oct 14</p>
+</div>
+</div>
+</div>
+<!-- Spreadsheet File (CSV): raw_transaction -->
+<div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 hover:shadow-lg hover:border-primary/30 transition-all cursor-pointer relative">
+<button class="absolute top-2 right-2 p-1 text-slate-400 opacity-0 group-hover:opacity-100 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-md transition-all">
+<span class="material-symbols-outlined text-lg">more_vert</span>
+</button>
+<div class="flex flex-col items-center text-center gap-3">
+<div class="size-16 flex items-center justify-center text-emerald-600 dark:text-emerald-400 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-6xl">description</span>
+</div>
+<div class="w-full">
+<h3 class="font-semibold text-slate-900 dark:text-slate-100 truncate px-2">raw_transaction.csv</h3>
+<div class="flex items-center justify-center gap-2 mt-1">
+<span class="bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold px-1.5 py-0.5 rounded uppercase">CSV</span>
+<span class="text-[11px] text-slate-500">14.2 MB</span>
+</div>
+<p class="text-[10px] text-slate-400 mt-2 italic">Modified yesterday</p>
+</div>
+</div>
+</div>
+<!-- Add New Card Placeholder -->
+</div>
+</section></div>
+<!-- Context Footer / Status -->
+<footer class="h-10 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-8 flex items-center justify-between shrink-0">
+<p class="text-[11px] text-slate-500 font-medium">5 files, 2 folders • 17.2 MB total</p>
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1 text-[11px] text-slate-500">
+<span class="size-2 rounded-full bg-emerald-500"></span>
+                        Cloud Sync Active
+                    </span>
+</div>
+</footer>
+</main>
+</div>
+</body></html>
