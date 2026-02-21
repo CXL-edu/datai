@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Spec colors */
+    --bg: 223 37% 97%;
+    --surface: 0 0% 100%;
+    --surface-alt: 213 37% 95%;
+    --text-primary: 220 48% 8%;
+    --text-secondary: 215 22% 37%;
+    --border-color: 215 33% 90%; /* renamed to avoid conflict with tailwind's 'border' utility class if mapped */
+    --brand: 175 77% 26%;
+    --brand-strong: 175 80% 21%;
+    --info: 224 76% 48%;
+    --success: 142 71% 29%;
+    --warning: 34 90% 37%;
+    --error: 0 74% 42%;
+
+    /* Shadcn mappings */
+    --background: var(--bg);
+    --foreground: var(--text-primary);
+
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+
+    --popover: var(--surface);
+    --popover-foreground: var(--text-primary);
+
+    --primary: var(--brand);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--surface-alt);
+    --secondary-foreground: var(--text-secondary);
+
+    --muted: var(--surface-alt);
+    --muted-foreground: var(--text-secondary);
+
+    --accent: var(--surface-alt);
+    --accent-foreground: var(--text-primary);
+
+    --destructive: var(--error);
+    --destructive-foreground: 0 0% 100%;
+
+    --border: var(--border-color);
+    --input: var(--border-color);
+    --ring: var(--brand);
+
+    --radius: 0.75rem; /* 12px */
+
+    /* Chart colors (default) */
+    --chart-1: 175 77% 26%; /* Brand */
+    --chart-2: 224 76% 48%; /* Info */
+    --chart-3: 142 71% 29%; /* Success */
+    --chart-4: 34 90% 37%; /* Warning */
+    --chart-5: 215 22% 37%; /* Secondary */
+  }
+
+  .dark {
+    /* Dark mode adjustments - basic inversion for now */
+    --bg: 220 48% 8%;
+    --surface: 222 47% 11%;
+    --surface-alt: 217 33% 17%;
+    --text-primary: 210 40% 98%;
+    --text-secondary: 215 20% 65%;
+    --border-color: 217 33% 17%;
+
+    --brand: 175 77% 26%; /* Keep brand color? Or lighten it for dark mode? */
+    /* Usually brand needs adjustment for contrast */
+    --brand: 175 50% 50%;
+
+    --background: var(--bg);
+    --foreground: var(--text-primary);
+
+    --card: var(--surface);
+    --card-foreground: var(--text-primary);
+
+    --popover: var(--surface);
+    --popover-foreground: var(--text-primary);
+
+    --primary: var(--brand);
+    --primary-foreground: 220 48% 8%;
+
+    --secondary: var(--surface-alt);
+    --secondary-foreground: var(--text-secondary);
+
+    --muted: var(--surface-alt);
+    --muted-foreground: var(--text-secondary);
+
+    --accent: var(--surface-alt);
+    --accent-foreground: var(--text-primary);
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: var(--border-color);
+    --input: var(--border-color);
+    --ring: var(--brand);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
